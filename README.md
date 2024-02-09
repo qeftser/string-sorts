@@ -14,9 +14,15 @@ Make run will run the sort with gullivers-travels.txt. If you want to try the-hu
  $ ./bin/string-sorts "bin/the-hunting-of-the-snark.txt"
  $ ./bin/string-sorts "bin/gullivers-travels.txt" // Same as make run
  $ ./bin/string-sorts "bin/800-thousand-strings.txt"
+ $ ./bin/string-sorts "bin/5-million-strings.txt"
 ```
 ### Results
-I was getting 0.02 seconds average for radix counting sort and 0.07 seconds average for three way radix quicksort. This was for gullivers-travels.txt. For the-hunting-of-the-snark.txt I was averaging 0.0025 seconds for radix counting sort and 0.0035 seconds for three way radix quicksort. For 800-thousand-strings.txt I was getting 0.07 seconds for radix counting and 0.1 for radix quicksort. 
+| File                         | Counting Sort | Quicksort  |
+|------------------------------|---------------|------------|
+| the-hunting-of-the-snark.txt |  0.0025s      | 0.0035s    |
+| gullivers-travels.txt        |  0.02s        | 0.07s      |
+| 800-thousand-strings.txt     |  0.07s        | 0.1s       |
+| 5-million-strings.txt        |  0.3s         | 0.6s       |
 
 ### Comments
 A note about each algorithm: Three way radix quicksort will be better for strings than quicksort because it ignores string length. Quicksort will not sort as expected due to variable length strings. At least that was my experience. For radix counting sort it is important to note that these text files were ascii only. Using radix counting sort would not likely be a good idea for text that relies heavily on unicode, something like Chinese or Japanese.
