@@ -34,8 +34,8 @@ int main(int argc, char **argv) {
    }
    avg_len /= (double) words;
 
-   char *A[words];
-   char *Reset[words];
+   char **A = malloc(sizeof(char *)*words);
+   char **Reset = malloc(sizeof(char *)*words);
 
    /* would have done a fseek but it is easier to scan strings this way */
    fclose(fptr);
