@@ -10,7 +10,8 @@
  */
 void counting_sort(char *A[], int i, int m) {
    static unsigned int C[256];
-   char *B[m];
+   /* allocate to heap to avoid overflowing stack */
+   char **B = malloc(sizeof(char *)*m);
    int j;
    /* initialize C */
    for (j = 0; j+3 < 256; j+=4) {
