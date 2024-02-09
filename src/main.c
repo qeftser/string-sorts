@@ -34,6 +34,7 @@ int main(int argc, char **argv) {
    }
    avg_len /= (double) words;
 
+   /* allocating to the heap to avoid overflowing the stack */
    char **A = malloc(sizeof(char *)*words);
    char **Reset = malloc(sizeof(char *)*words);
 
