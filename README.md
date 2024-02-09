@@ -25,5 +25,5 @@ A note about each algorithm: Three way radix quicksort will be better for string
 
 ### References
 Three way radix quicksort: https://en.wikipedia.org/wiki/Multi-key_quicksort   
-Trhee way quicksort partition: https://en.wikipedia.org/wiki/Quicksort#Repeated_elements   
+Three way quicksort partition: https://en.wikipedia.org/wiki/Quicksort#Repeated_elements   
 Counting and radix counting sort: https://mitpress.mit.edu/9780262046305/introduction-to-algorithms/   
